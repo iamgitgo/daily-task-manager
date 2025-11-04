@@ -765,7 +765,7 @@ export default function App() {
             
 
               {/* Tasks for Selected Date */}
-              <div className="flex-1 max-h-[200px] md:max-h-auto overflow-y-auto p-6">
+              <div className="flex-1 max-h-[400px] md:max-h-auto overflow-y-auto p-6">
                 {selectedHistoryDate ? (
                   <>
                     {historyTasks.length === 0 ? (

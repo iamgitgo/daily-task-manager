@@ -960,7 +960,7 @@ export default function App() {
                   onChange={() => toggleTask(task.id)}
                   className="w-5 h-5 text-blue-500 rounded cursor-pointer"
                 />
-                {editingTaskId === task.id ? (
+                {(editingTaskId === task.id&&!task.completed) ? (
                   <input
                     type="text"
                     value={editingText}
@@ -991,6 +991,7 @@ export default function App() {
                 )}
                 <button
                   onClick={() => deleteTask(task.id)}
+                  disabled={task.completed }
                   className="text-red-500 hover:text-red-700 transition-colors"
                 >
                   <Trash2 className="w-5 h-5" />
